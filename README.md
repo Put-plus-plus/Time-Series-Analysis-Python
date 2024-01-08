@@ -9,6 +9,6 @@ remember to add the link to the GIF, which I must also make sure to add to the r
 * Python version 3.9.1
 * Pandas, random, tkinter, time, googletrans, transliterate, newspaper, numpy, os, logging
 
-## Execution
+## Execution - Infectious Disease Example
 Just testing stuff out
 is this how you do `code`

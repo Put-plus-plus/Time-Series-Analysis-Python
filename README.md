@@ -12,7 +12,7 @@ The `DataPrep` class has a `read_zip()` method for reading in a zip file,  and a
 ```python
 chicken_pox_model = NeuralNetwork()
 print chicken_pox_model.model_performance()
-OUTPUT: something
+//OUTPUT: something
 ```
 
 ## Animation - Infectious Disease Example

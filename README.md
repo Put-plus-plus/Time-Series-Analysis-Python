@@ -18,3 +18,4 @@ print chicken_pox_model.model_performance()
 ## Animation - Infectious Disease Example
 remember to add the link to the GIF, which I must also make sure to add to the repo, see stackoverflow - not sure if I add the prediction
 
+ 

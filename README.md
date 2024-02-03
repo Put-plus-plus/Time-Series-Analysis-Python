@@ -5,6 +5,8 @@ The `Data` class has three methods. The `extract_data()` method accepts a string
 
 The `NeuralNetwork`class has three methods. The `split_data()` method accepts a dataframe (df_cleaned) with the date data as the index and the event data in a single column. Accepts a string (split_date) in the "%d/%m/%Y" format for defining the cutoff for the split of the data into train and test datasets. Output is four numpy arrays with scaled train (X_train, y_train) and test (X_test, y_test) data. The `define_model()` accepts an integer (in_nodes) with the number of nodes in the input layer, and with the default set to two. Outputs the structure (self.nn_model) of a recursive neural network model. The `fit_model()` method fits a recursive neural network model (self.nn_model) to the data and returns the mean absolute error (mae) and root mean squarred error (rmse).
 
+The dataset used in the below example is an adapted version of Hungarian Chickenpox Cases. (2021). UCI Machine Learning Repository. https://doi.org/10.24432/C5103B. Time and count errors have been introduced to illustrate the data cleaning capabilities of the code, and a selection of features has been made for this analysis.  
+
   
 ## Dependencies
 * Microsoft Windows 10.0.19045

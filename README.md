@@ -3,7 +3,7 @@ Using a neural network for time series analysis. The project involves processing
 
 The `DataCleaning` class has a `read_zip()` method for reading in a zip file,  and a `clean_dataframe()` method for cleaning and filtering allowed values. The `NeuralNetwork` class has a `model_data_split()` method for using a time stemp to split the data, a `model_structure()` method for defining the structure recursive artifical neural model,  and a `model_performance()` method for training the model and evaluating its performance.   
 
- 
+  
 ## Dependencies
 * Microsoft Windows 10.0.19045
 * Python 3.9.1

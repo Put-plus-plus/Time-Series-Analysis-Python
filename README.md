@@ -15,9 +15,9 @@ The `NeuralNetwork`class has three methods. The `split_data()` method accepts a 
 ```python
 from timeseriesanalysis import *
 
-Data.extract_data('C:\\Users\\plain\\Desktop\\hungarian+chickenpox+cases.zip', 'hungary_chickenpox.csv', 'C:\\Users\\plain\\Desktop')          
+Data.extract_data('C:\\Users\\User\\Desktop\\hungarian+chickenpox+cases.zip', 'hungary_chickenpox.csv', 'C:\\Users\\User\\Desktop')          
 chickenpox_data = Data()
-chickenpox_data.read_data('C:\\Users\\plain\\Desktop\\hungary_chickenpox.csv')
+chickenpox_data.read_data('C:\\Users\\User\\Desktop\\hungary_chickenpox.csv')
 chickenpox_data.clean_data('Date', 'BUDAPEST', 0, 1000) 
 
 chickenpox_nn = NeuralNetwork()
@@ -28,6 +28,6 @@ print(chickenpox_mae_rmse)
 ```
 
 ## Animation - chickenpox incidence example
-remember to add the link to the GIF, which I must also make sure to add to the repo, see stackoverflow - not sure if I add the prediction
+remember to add the link to the GIF, which I must also make sure to add to the repo, see stackoverflow
 
  

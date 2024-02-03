@@ -1,5 +1,5 @@
 ## Description 
-In the `timeseriesanalysis.py` module data is prepared  (`Data` class) and a recursive neural network is used for time series analysis (`NeuralNetowrk` class). 
+In the `timeseriesanalysis.py` module count of events data is pre-proccessed (`Data` class) and a recursive neural network is used for time series analysis (`NeuralNetowrk` class). 
 
 The `Data` class has three methods. The `extract_data()` method accepts a string with the path including the complete file name of a zip file, a string (csvfile_name) with the name of a compressed csv file contained within the zip file, and a string (csvfile_destination) with the desired destination destination of the csv file to be extracted. Outputs an uncompressed csv file. The `read_data()` method accepts a string (csvfile_path) with the path including the complete file name of a csv file. Reads a csv file in as a dataframe with raw data (self.df_raw). The `clean_data()` method accepts a string (date_col) with the name of the date column, a string (event_col) with the name of the column with counts of events, an integer (event_min) with the minimum permitted number of events, and an integer (event_max) with the maximum permitted number of events. Date data must be in the %d/%m/%Y format. A dataframe with raw data (self.df_raw) is filtered to produce a dataframe (self.df_clean) without date data entry errors and with permitted counts of events, formatted so that a column with counts of events is the only column and date data is set as the dataframe index.
 
@@ -13,9 +13,18 @@ The `NeuralNetwork`class has three methods. The `split_data()` method accepts a 
 
 ## Execution - chickenpox incidence example
 ```python
-chicken_pox_model = NeuralNetwork()
-print chicken_pox_model.model_performance()
-# OUTPUT: something
+from timeseriesanalysis import *
+
+Data.extract_data('C:\\Users\\plain\\Desktop\\hungarian+chickenpox+cases.zip', 'hungary_chickenpox.csv', 'C:\\Users\\plain\\Desktop')          
+chickenpox_data = Data()
+chickenpox_data.read_data('C:\\Users\\plain\\Desktop\\hungary_chickenpox.csv')
+chickenpox_data.clean_data('Date', 'BUDAPEST', 0, 1000) 
+
+chickenpox_nn = NeuralNetwork()
+chickenpox_nn.split_data(chickenpox_data.df_clean, "27/08/2012")  
+chickenpox_nn.define_model()                                  
+chickenpox_mae_rmse = chickenpox_nn.fit_model()
+print(chickenpox_mae_rmse)
 ```
 
 ## Animation - chickenpox incidence example

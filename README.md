@@ -11,7 +11,7 @@ The `NeuralNetwork`class has three methods. The `split_data()` method accepts a 
 * Python 3.9.1
 * zipfile (built-in), pandas 1.2.2, numpy 1.22.2, sklearn 1.0.1, keras 2.12.0
 
-## Execution - chickenpox incidence example
+## Execution - chickenpox cases example
 ```python
 from timeseriesanalysis import *
 
@@ -27,7 +27,7 @@ chickenpox_mae_rmse = chickenpox_nn.fit_model()
 print(chickenpox_mae_rmse)
 ```
 
-## Animation - chickenpox incidence example
+## Animation - chickenpox cases example
 remember to add the link to the GIF, which I must also make sure to add to the repo, see stackoverflow
 
  

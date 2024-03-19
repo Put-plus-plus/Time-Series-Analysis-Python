@@ -111,7 +111,6 @@ class NeuralNetwork:
             self.scaler = MinMaxScaler(feature_range=(-1, 1))                                           
             array_train_scaled = self.scaler.fit_transform(df_train)                                     
             array_test_scaled = self.scaler.transform(df_test)
-            np.random.shuffle(array_train_scaled)
 
             self.X_train = array_train_scaled[:-1]                                
             self.y_train = array_train_scaled[1:]

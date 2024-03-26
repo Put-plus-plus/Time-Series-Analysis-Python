@@ -100,7 +100,7 @@ class NeuralNetwork:
         '''Accepts a dataframe (df_cleaned) with the date data as the index and the event data in a single column. Accepts a string (split_date) 
           in the "%d/%m/%Y" format for defining the cutoff for the split of the data into train and test datasets. Output is four numpy arrays with 
           scaled train data (self.X_train, self.y_train) and test data (self.X_test, self.y_test) formatted in such a way that if eg 
-          array_train_scaled is [[0.1] [0.2] [0.3] [0.4] [0.5] [0.6] [0.7] [0.8] [0.9] [1.0]] and sequence_len is 3, then 
+          array_train_scaled is [[0.1] [0.2] [0.3] [0.4] [0.5] [0.6] [0.7] [0.8] [0.9] [1.0]] and self.sequence_len is 3, then 
           self.X_train is [[[0.1][0.2][0.3]]  [[0.2][0.3][0.4]]  [[0.3][0.4][0.5]]  [[0.4][0.5][0.6]...]] and 
           self.y_train is [[0.4] [0.5] [0.6] [0.7]...]. ''' 
     
